@@ -4,22 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carol Ribeiro</title>
+
+    <style>
+        /* Estilo para a caixa */
+        #caixa {
+            width: 200px;
+            height: 100px;
+            background-color: blueviolet;
+            color: red;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #333;
+            font-size: 16px;
+        }
+    </style>
+    
 </head>
+
 <body>
     <h1 id = 'texto'> Texto Original</h1>
     <h3> Texto atualizado via DOM</h3>
 
     <p>Clique para receber uma mensagem.</p>
-    <button onclick="alertaTexto()">Experimente</button>
+    <button onclick="alertaTexto()"><h4>Experimente</h4></button>
     <p id = "texto"></p>
 
-    <button onclick="alteraCor()">Alternar Cor de Fundo</button>
+    <button onclick="alteraCor()"><h4>Alternar Cor de Fundo</h4></button>
     
 
-    <p id = "textoUrl"></p>
-    <button type="button" onclick="exibeURLAtual()">Mostrar URL de Origem</button>
+    <p id="texto3">Mostra URL de Origem</p>
+
+    <button type="button" onclick="exibeURLAtual()"><h4>URL de Origem</h4></button>
+
+    <p id = "textoUrl">Número de URLs na lista de histórico:</p>
+
+    <button type="button" onclick="voltaPagina()"><h4>Voltar à página anterior</h4></button>
 
 
+
+    <p>Verifica se os cookies estão habilitados:</p>
+    <button type="button" onclick="verificaCookies()"><h4>Verifica Cookies</h4></button>
+
+
+ <style>
+        /* Estilo para a caixa */
+        #caixa {
+            width: 200px;
+            height: 100px;
+            background-color: blueviolet;
+            color: DeepSkyBlue	;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #333;
+            font-size: 16px;
+        }
+    </style>
+
+    <h4>Alteração de Cor com Mouse</h4>
+
+    <div id="caixa" onmouseover="mudarCor()" onmouseout="restaurarCor()">
+        Passe o mouse aqui!
+    </div>
 
     <script src='teste.js'></script>
 
