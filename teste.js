@@ -60,3 +60,19 @@ function exibeURLAtual(){
         function restaurarCor() {
           document.getElementById("caixa").style.backgroundColor = "Khaki";
       }
+
+
+      function detectaTeclasPressionadas(event) {
+        console.log("Tecla pressionada:", event.key);
+
+        // Verifica se a tecla pressionada é um número
+        if (!isNaN(event.key) && event.key !== " ") {
+            event.preventDefault(); // Impede a inserção da tecla no campo de entrada
+            console.log("Tecla bloqueada:", event.key);
+            document.getElementById("texto5").innerHTML = "Você precionou uma tecla numérica, o nº:  " + event.key + ".  A tecla está bloqueada. " ;
+        } else {
+            // Se a tecla não é um número, exibe a mensagem com a tecla pressionada
+            document.getElementById("texto5").innerHTML = "Você pressionou uma tecla dentro do campo de entrada - A chave era: " + event.key;
+        
+       }
+      }
